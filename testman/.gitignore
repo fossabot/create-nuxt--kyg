@@ -1,7 +1,0 @@
-# NodeJS
-node_modules
-*.log
-
-# NuxtJS
-.nuxt/
-dist/
