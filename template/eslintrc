@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "extends": [
+    "@nuxtjs",
+    "prettier-standard"
+  ],
+  "plugins": [
+    "prettier"
+  ]
+}
