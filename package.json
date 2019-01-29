@@ -1,20 +1,38 @@
 {
   "name": "create-nuxt--kyg",
   "version": "0.1.0",
-  "description": "My Nuxt.js Template",
+  "description": "Ressedpanda's Nuxt.js Template Generator",
   "main": "index.js",
-  "repository": "git@github.com:ressedpanda/create-nuxt--kyg.git",
+  "bin": {
+    "create-nuxt--kyg": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ressedpanda/create-nuxt--kyg.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/ressedpanda/create-nuxt--kyg/issues"
+  },
+  "homepage": "https://github.com/ressedpanda/create-nuxt--kyg#readme",
+  "keywords": [
+    "sao",
+    "template",
+    "generator",
+    "nuxt",
+    "vue"
+  ],
   "author": "Kim Younggeon <mail@kyg.kr>",
   "license": "MIT",
   "files": [
+    "index.js",
     "saofile.js",
     "template"
   ],
   "scripts": {
     "test": "ava"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^0.25.0",
     "sao": "^1.0.0"
