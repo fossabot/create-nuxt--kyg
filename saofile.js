@@ -115,7 +115,7 @@ module.exports = {
     ]
   },
   actions() {
-    const { name, description, version, license, mode, srcDir, module, stylesheet } = this.answers
+    const { license, srcDir, module, stylesheet } = this.answers
 
     return [
       {
@@ -153,15 +153,14 @@ module.exports = {
         templateDir: 'template/nuxt',
         files: '**'
       },
-      {
+      (srcDir !== '.') && {
         type: 'move',
         patterns: {
           /* layout */
-          'layouts/default.vue': `${srcDir}/layouts/default.vue`,
-          'layouts/error.vue': `${srcDir}/layouts/error.vue`,
+          'layouts': `${srcDir}/layouts`,
 
           /* page */
-          'pages/index.vue': `${srcDir}/pages/index.vue`,
+          'pages': `${srcDir}/pages`,
         }
       },
       /* 공통 파일 이름변경 */
