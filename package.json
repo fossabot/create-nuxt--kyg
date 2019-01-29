@@ -1,6 +1,6 @@
 {
   "name": "create-nuxt--kyg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ressedpanda's Nuxt.js Template Generator",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ressedpanda/create-nuxt--kyg.git"
   },
-
   "bugs": {
     "url": "https://github.com/ressedpanda/create-nuxt--kyg/issues"
   },
@@ -30,6 +29,7 @@
     "template"
   ],
   "scripts": {
+    "publish": "npm publish",
     "test": "ava"
   },
   "dependencies": {
