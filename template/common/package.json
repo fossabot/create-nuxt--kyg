@@ -3,9 +3,14 @@
   "description": "<%=description%>",
   "version": "<%=version%>",
   "license": "<%=license%>",
+  "scripts": {
+    "build": "npx nuxt build",
+    "start": "npx nuxt start",
+
+    "dev": "npx nuxt"
+  },
   "dependencies": {
-    "koa": "^2.7.0",
-    "nuxt": "^2.3.4"
+    "nuxt": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
