@@ -1,6 +1,6 @@
 {
   "name": "create-nuxt--kyg",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Ressedpanda's Nuxt.js Template Generator",
   "main": "index.js",
   "bin": {
@@ -32,9 +32,10 @@
   "scripts": {
     "test": "ava"
   },
-  "dependencies": {},
+  "dependencies": {
+    "sao": "^1.6.1"
+  },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "sao": "^1.0.0"
+    "ava": "^0.25.0"
   }
 }
