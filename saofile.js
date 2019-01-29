@@ -1,13 +1,22 @@
 const dependencies_list = {
+  // dependencies
   "@nuxtjs/axios": "^5.3.6",
   "@nuxtjs/pwa": "^2.6.0",
   "nuxt-i18n": "^5.8.0",
+
+  // dev dependencies
   "sass": "^1.16.1",
   "sass-loader": "^7.1.0"
 };
 
 
 module.exports = {
+  templateData () {
+    return {
+      year: new Date().getFullYear(),
+      username: this.gitUser.name
+    }
+  },
   prompts() {
     return [
       {
@@ -38,7 +47,7 @@ module.exports = {
           },
           {
             name: 'MIT License',
-            value: 'mit'
+            value: 'MIT'
           },
           {
             name: 'Unlicense',
@@ -65,7 +74,7 @@ module.exports = {
       {
         name: 'srcDir',
         message: 'Nuxt.JS 소스 루트 위치',
-        default: '.',
+        default: 'src',
       },
       {
         name: 'module',
@@ -106,13 +115,56 @@ module.exports = {
     ]
   },
   actions() {
-    const that = this.answers
+    const { name, description, version, license, mode, srcDir, module, stylesheet } = this.answers
 
     return [
       {
         type: 'add',
-        files: './**'
+        templateDir: 'template/common',
+        files: '**'
       },
+      {
+        type: 'modify',
+        files: 'package.json',
+        handler(pkg) {
+
+          for (that of module) {
+            pkg.dependencies[that] = dependencies_list[that]
+          }
+
+          if (that.stylesheet !== 'css') {
+            for (that of stylesheet) {
+              pkg.devDependencies[that] = dependencies_list[that]
+            }
+          }
+
+          return pkg
+        }
+      },
+      /* 라이선스 선택 */
+      {
+        type: 'add',
+        templateDir: 'template/license',
+        files: `LICENSE-${license}`
+      },
+      /* nuxt 파일 이동 */
+      {
+        type: 'add',
+        templateDir: 'template/nuxt',
+        files: '**'
+      },
+      {
+        type: 'move',
+        patterns: {
+          /* layout */
+          'layouts/default.vue': `${srcDir}/layouts/default.vue`,
+          'layouts/error.vue': `${srcDir}/layouts/error.vue`,
+
+          /* page */
+          'pages/index.vue': `${srcDir}/pages/index.vue`,
+        }
+      },
+      /* 공통 파일 이름변경 */
       {
         type: 'move',
         patterns: {
@@ -120,31 +172,16 @@ module.exports = {
           editorconfig: '.editorconfig',
           eslintrc: '.eslintrc',
           prettierrc: '.prettierrc',
+          'LICENSE-*': 'LICENSE'
         }
       },
-      {
-        type: 'modify',
-        files: 'package.json',
-        handler(pkg) {
-
-          for (module of that.module) {
-            pkg.dependencies[module] = dependencies_list[module]
-          }
-
-          if (that.stylesheet !== 'css') {
-            for (stylesheet of that.stylesheet) {
-              pkg.devDependencies[stylesheet] = dependencies_list[stylesheet]
-            }
-          }
-
-          return pkg
-        }
-      }
     ]
   },
   async completed() {
     this.gitInit()
+
     await this.npmInstall()
+
     this.showProjectTips()
   }
 }
