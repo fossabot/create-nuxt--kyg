@@ -2,7 +2,7 @@
   "name": "<%=name%>",
   "description": "<%=description%>",
   "version": "<%=version%>",
-  "license": "<%=module%>",
+  "license": "<%=license%>",
   "dependencies": {
     "koa": "^2.7.0",
     "nuxt": "^2.3.4"
