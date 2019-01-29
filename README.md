@@ -15,19 +15,19 @@ $ yarn create nuxt--kyg <project-name>
 
 ## Features
 1. License
-  - MIT
-  - The Unlicense
+	- MIT
+	- The Unlicense
 2. Nuxt.js Rendering Mode
-  - Single Page Application (spa)
-  - Universal Application (universal)
+	- Single Page Application (spa)
+	- Universal Application (universal)
 3. Nuxt.js Module
-  - HTTP Client (@nuxtjs/axios)
-  - Localization (nuxt-i18n)
-  - PWA (@nuxtjs/pwa)
+	- HTTP Client (@nuxtjs/axios)
+	- Localization (nuxt-i18n)
+	- PWA (@nuxtjs/pwa)
 4. stylesheet
-  - CSS
-  - SCSS
-  - ~~LESS~~ (TODO)
-  - ~~Element UI~~ (TODO)
+	- CSS
+	- SCSS
+	- ~~LESS~~ (TODO)
+	- ~~Element UI~~ (TODO)
 5. ~~Test Framework~~ (TODO)
-  - None
+	- None
