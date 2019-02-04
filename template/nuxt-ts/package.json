@@ -6,7 +6,6 @@
   "scripts": {
     "build": "npx nuxt build",
     "start": "npx nuxt start",
-
     "dev": "npx nuxt"
   },
   "dependencies": {

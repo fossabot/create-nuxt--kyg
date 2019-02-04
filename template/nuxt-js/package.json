@@ -6,7 +6,6 @@
   "scripts": {
     "build": "npx nuxt build",
     "start": "npx nuxt start",
-
     "dev": "npx nuxt"
   },
   "dependencies": {
@@ -31,6 +30,8 @@
     "prettier": "^1.16.1"
   },
   "babel": {
-    "presets": ["@nuxt/babel-preset-app"]
+    "presets": [
+      "@nuxt/babel-preset-app"
+    ]
   }
 }
