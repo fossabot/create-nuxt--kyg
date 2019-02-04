@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script>
+<script<% if(language === 'ts') { %> lang="ts"<% } %>>
 export default {
   name: 'Layout'
 }

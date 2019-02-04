@@ -17,6 +17,9 @@ $ yarn create nuxt--kyg <project-name>
 1. License
 	- MIT
 	- The Unlicense
+2. Nuxt.js Language
+	- Javascript (default)
+	- Typescript
 2. Nuxt.js Rendering Mode
 	- Single Page Application (spa)
 	- Universal Application (universal)

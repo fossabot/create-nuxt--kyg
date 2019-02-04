@@ -56,6 +56,22 @@ module.exports = {
         ]
       },
       {
+        name: 'language',
+        message: 'Nuxt.JS 언어',
+        type: 'list',
+        default: 'js',
+        choices: [
+          {
+            name: 'Javascript',
+            value: 'js'
+          },
+          {
+            name: 'Typescript',
+            value: 'ts'
+          }
+        ]
+      },
+      {
         name: 'mode',
         message: 'Nuxt.JS 렌더링 모드: ',
         type: 'list',
@@ -115,31 +131,13 @@ module.exports = {
     ]
   },
   actions() {
-    const { license, srcDir, module, stylesheet } = this.answers
+    const { license, srcDir, module, language, stylesheet } = this.answers
 
     return [
       {
         type: 'add',
         templateDir: 'template/common',
         files: '**'
-      },
-      {
-        type: 'modify',
-        files: 'package.json',
-        handler(pkg) {
-
-          for (that of module) {
-            pkg.dependencies[that] = dependencies_list[that]
-          }
-
-          if (that.stylesheet !== 'css') {
-            for (that of stylesheet) {
-              pkg.devDependencies[that] = dependencies_list[that]
-            }
-          }
-
-          return pkg
-        }
       },
       /* 라이선스 선택 */
       {
@@ -152,6 +150,56 @@ module.exports = {
         type: 'add',
         templateDir: 'template/nuxt',
         files: '**'
+      },
+      {
+        type: 'modify',
+        files: 'nuxt.config.json',
+        handler(conf) {
+
+          /* 소스폴더 위치 */
+          if (srcDir !== '.') {
+            conf.srcDir = srcDir
+          }
+
+          /* 모듈 import */
+          if ((typeof module) !== 'undefined') {
+            conf.module = []
+            for (that of module) {
+              conf.module.push(that)
+            }
+          }
+
+          return conf
+        }
+      },
+      {
+        type: 'move',
+        patterns: {
+          'nuxt.config.json': `nuxt.config.${language}`
+        }
+      },
+      {
+        type: 'add',
+        templateDir: `template/nuxt-${language}`,
+        files: '**'
+      },
+      {
+        type: 'modify',
+        files: 'package.json',
+        handler(pkg) {
+
+          for (that of module) {
+            pkg.dependencies[that] = dependencies_list[that]
+          }
+
+          if (stylesheet !== 'css') {
+            for (that of stylesheet) {
+              pkg.devDependencies[that] = dependencies_list[that]
+            }
+          }
+
+          return pkg
+        }
       },
       (srcDir !== '.') && {
         type: 'move',
@@ -178,9 +226,6 @@ module.exports = {
   },
   async completed() {
     this.gitInit()
-
-    await this.npmInstall()
-
     this.showProjectTips()
   }
 }

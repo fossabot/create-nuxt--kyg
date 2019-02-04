@@ -1,0 +1,25 @@
+{
+  "name": "<%=name%>",
+  "description": "<%=description%>",
+  "version": "<%=version%>",
+  "license": "<%=license%>",
+  "scripts": {
+    "build": "npx nuxt build",
+    "start": "npx nuxt start",
+
+    "dev": "npx nuxt"
+  },
+  "dependencies": {
+    "nuxt-ts": "^2.4.0",
+    "typescript": "^3.3.1"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "^2.4.2",
+    "@types/node": "^10.12.21",
+    "@nuxt/vue-app": "^2.4.2",
+    "tslint": "^5.12.1",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-config-prettier": "^1.17.0",
+    "prettier": "^1.16.1"
+  }
+}
