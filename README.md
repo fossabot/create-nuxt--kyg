@@ -1,7 +1,8 @@
 # Create Nuxt for KYG
-> forked [nuxt/create-nuxt-app](https://github.com/nuxt/create-nuxt-app)
+> Nuxt.js Scaffolding Tools 
 
 ## Usage
+
 ### npm
 ```bash
 $ npm install -g create-nuxt--kyg
@@ -14,23 +15,20 @@ $ yarn create nuxt--kyg <project-name>
 ```
 
 ## Features
-1. License
-	- MIT
-	- The Unlicense
-2. Nuxt.js Language
-	- Javascript (default)
-	- Typescript
-2. Nuxt.js Rendering Mode
-	- Single Page Application (spa)
-	- Universal Application (universal)
-3. Nuxt.js Module
-	- HTTP Client (@nuxtjs/axios)
-	- Localization (nuxt-i18n)
-	- PWA (@nuxtjs/pwa)
-4. stylesheet
-	- CSS
-	- SCSS
-	- ~~LESS~~ (TODO)
-	- ~~Element UI~~ (TODO)
-5. ~~Test Framework~~ (TODO)
-	- None
+### Project Information
+1. Project Name (default: folder name)
+2. Project Description
+3. Project Version (default: 0.1.0)
+4. Project License
+    - None (or custom)
+    - MIT License
+    - The Unlicense
+    
+### Nuxt.js
+5. Nuxt.js Development Language
+    - Javascript (default)
+    - Typescript
+6. Nuxt.js Source Folder (default: src)
+6. Nuxt.js Rendering Mode
+    - Universal Application (default)
+    - Single Page Application

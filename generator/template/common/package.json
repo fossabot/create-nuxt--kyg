@@ -1,0 +1,11 @@
+{
+  "name": "<%=name%>",
+  "version": "<%=version%>",
+  "description": "<%=description%>",
+  "license": "<%=license%>",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
+}

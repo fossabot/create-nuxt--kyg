@@ -7,12 +7,12 @@
 
 <script<% if(language === 'ts') { %> lang="ts"<% } %>>
 export default {
-name: 'Error',
-props: {
-error: {
-type: Object,
-required: true
-}
-}
+  name: 'Error',
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>

@@ -6,6 +6,6 @@
 
 <script<% if(language === 'ts') { %> lang="ts"<% } %>>
 export default {
-name: 'Index'
+  name: 'Index'
 }
 </script>
