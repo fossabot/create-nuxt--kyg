@@ -10,7 +10,6 @@ deploy:
     provider: releases
     api_key:
       secure: MsI6sCUoTcSImLUcs8LUFQKay1sYrU9mRkzL5p97G/ZMiYWBpEa0za2+rnhAPi8z8HQjf24XLfgfurp+HxAqx0HG51HYmOFqIZQaciOvvQbWO+cvE543Kw7md2ghzjwHKNOIBDYhusKPv/5xrCmDIighjNczesy96Rjug5Ao7OVlTZ16tMlvIrvWw8KKlYf9iSM/Uk1kbr+/SxTj61RpyUEnc6fgWS4XsFStzvRwryCD29w5qa+VXin0bAd27LdrZcIYLTCs8aRVndqGvHI50fIWuYqEGQ71mdHwvIbONYma63PeTgdPe0lYfx6JWeV85yOWjHiBpHBrIlYwibkH4KZlWZ6f6Q4m9BPgpVwbKQA6piDisZDNFMhwBV2BCgQB//w0T+6uUX4gPiZXAzLTYR9q4xbAk/EDCEYKhgiBQMNdDF6a2QnFsy9vpmFOpQa7SVWEyzr+27zc3jhJmz/aoAuZX0i+TBuNabEuGlyIgy1PicuF1lMVUnaYET8m31Juk080ivtbcEkm4g8eNTC4P/bNvo6wbFmZP4u8z3PW2R9l+H0td+fqV8NQEYsGux26JoEz2pHCYngBYd/uZyzS9Texjh24sMA58F9dYvNMRdexqBibVbt7S4E8NCTFcFtvUEGAphjp7eMmKMNeLi6o8yEAxdUrLMw/oEqtWHKzq9M=
-    file: ''
     on:
       repo: ressedpanda/create-nuxt--kyg
   - provider: npm
