@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ressedpanda/create-nuxt--kyg#readme",
   "scripts": {
-    "prepublish": "npx tsc",
+    "prepare": "npx tsc",
     "test": "npx tsc && npx ava"
   },
   "keywords": [
