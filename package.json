@@ -29,7 +29,6 @@
     "template"
   ],
   "dependencies": {
-    "consola": "^2.3.2",
     "sao": "^1.6.1"
   },
   "devDependencies": {

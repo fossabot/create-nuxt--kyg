@@ -845,7 +845,7 @@ chunkd@^1.0.0:
   resolved "https://registry.yarnpkg.com/chunkd/-/chunkd-1.0.0.tgz#4ead4a3704bcce510c4bb4d4a8be30c557836dd1"
   integrity sha512-xx3Pb5VF9QaqCotolyZ1ywFBgyuJmu6+9dLiqBxgelEse9Xsr3yUlpoX3O4Oh11M00GT2kYMsRByTKIMJW2Lkg==
 
-ci-info@^1.5.0, ci-info@^1.6.0:
+ci-info@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
   integrity sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==
@@ -1022,17 +1022,6 @@ configstore@^3.0.0:
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
 
-consola@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.3.2.tgz#ec75dd9847fa963dc41e21bc2737ac8c962677bb"
-  integrity sha512-7SAo6nBdWJw7XQFu0ZRnXbGBu+RhEp0/fEpm7lTnqRT6bHM0MwEkW0Yxv8phCP9s18qyMqBmVU/pJ2bri/TZIg==
-  dependencies:
-    chalk "^2.4.1"
-    dayjs "^1.7.7"
-    figures "^2.0.0"
-    std-env "^2.2.1"
-    string-width "^2.1.1"
-
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
@@ -1115,11 +1104,6 @@ date-time@^2.1.0:
   integrity sha512-/9+C44X7lot0IeiyfgJmETtRMhBidBYM2QFFIkGa0U1k+hSyY87Nw7PY3eDqpvCBm7I3WCSfPeZskW/YYq6m4g==
   dependencies:
     time-zone "^1.0.0"
-
-dayjs@^1.7.7:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.2.tgz#8668e50c1e048e1b1638ebe6c3552187a34ffa64"
-  integrity sha512-iHNxe5kIbxmPgzJFjks9TFMokOu3TQcUUSagb/Ff7GZNi7ulYF0qaAZ61trZEFOONgrp4jvKVpBJ86qy4UsSoA==
 
 debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
@@ -3813,13 +3797,6 @@ static-extend@^0.1.1:
   dependencies:
     define-property "^0.2.5"
     object-copy "^0.1.0"
-
-std-env@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/std-env/-/std-env-2.2.1.tgz#2ffa0fdc9e2263e0004c1211966e960948a40f6b"
-  integrity sha512-IjYQUinA3lg5re/YMlwlfhqNRTzMZMqE+pezevdcTaHceqx8ngEi1alX9nNCk9Sc81fy1fLDeQoaCzeiW1yBOQ==
-  dependencies:
-    ci-info "^1.6.0"
 
 string-width@^1.0.1:
   version "1.0.2"
