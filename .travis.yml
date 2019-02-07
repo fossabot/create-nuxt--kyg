@@ -5,3 +5,18 @@ node_js:
 cache:
   directories:
     - node_modules
+deploy:
+  - deploy:
+    provider: releases
+    api_key:
+      secure: MsI6sCUoTcSImLUcs8LUFQKay1sYrU9mRkzL5p97G/ZMiYWBpEa0za2+rnhAPi8z8HQjf24XLfgfurp+HxAqx0HG51HYmOFqIZQaciOvvQbWO+cvE543Kw7md2ghzjwHKNOIBDYhusKPv/5xrCmDIighjNczesy96Rjug5Ao7OVlTZ16tMlvIrvWw8KKlYf9iSM/Uk1kbr+/SxTj61RpyUEnc6fgWS4XsFStzvRwryCD29w5qa+VXin0bAd27LdrZcIYLTCs8aRVndqGvHI50fIWuYqEGQ71mdHwvIbONYma63PeTgdPe0lYfx6JWeV85yOWjHiBpHBrIlYwibkH4KZlWZ6f6Q4m9BPgpVwbKQA6piDisZDNFMhwBV2BCgQB//w0T+6uUX4gPiZXAzLTYR9q4xbAk/EDCEYKhgiBQMNdDF6a2QnFsy9vpmFOpQa7SVWEyzr+27zc3jhJmz/aoAuZX0i+TBuNabEuGlyIgy1PicuF1lMVUnaYET8m31Juk080ivtbcEkm4g8eNTC4P/bNvo6wbFmZP4u8z3PW2R9l+H0td+fqV8NQEYsGux26JoEz2pHCYngBYd/uZyzS9Texjh24sMA58F9dYvNMRdexqBibVbt7S4E8NCTFcFtvUEGAphjp7eMmKMNeLi6o8yEAxdUrLMw/oEqtWHKzq9M=
+    file: ''
+    on:
+      repo: ressedpanda/create-nuxt--kyg
+    - provider: npm
+      email: mail@kyg.kr
+      api_key:
+        secure: kuXy9kTLa0M9kpRtS0sbyNeLTBiqmPc+WjWp0AGxsv+dwEUt7BvjvurywZm4wjsJ95zwOv5NJ5VbPKxV5xJREwdcSjhEQkL7wHdedKSrPpiRGswhWX5J2d0YPkoleUuBkT1vfOcXOlqTkOS4++j/X4wqGViYNN+t1qPu+t9eREgSmbu4EOPyMvhK6YgNrSTsbEPW45YenJbs2mQ4rvojP4SLGKyLSWbXCxSESf5a2hIrbiT1A1MQcrrXcC4vrqLW+SuWIr4pPcJFkhEQMnVcqMQH3Gc0qBxh7w6tavDwz5kppIYXn957D5T1SPZRrCAsg0XL+is63A2zHzzvBSb+44tpJ0eWgnaGI9HSqOmiyU7/d2Jv97wPPxb6LEHGtMsER1qAG6WvmDwfLun4vYBZnsK8rh8vGW6GsM0F3xND14WPbTlqia+u41q5MJENTCijQsqOYhOt0XrVS4Mfsf7/B1eTxcjG+ScXcccNU2bqSslf0eA6AMVMQ8Jr58eK0vi5tVzj2EmYxcMkwgR8neCE/lgS52Nwg/pthGb5oJqaQnQdfuglFyt+09JnAkgyfDB9BAGw0rduTBolNrujdzofbCDno6zrtR7efoHixAqMRWetGrQ8PpsA2oNawxVyPc2+w33+QWpWJDfrjnL/DTsUdX85vQXAMduMj5NbuysrtiY=
+      on:
+        tags: true
+        repo: ressedpanda/create-nuxt--kyg
