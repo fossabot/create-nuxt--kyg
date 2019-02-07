@@ -35,7 +35,6 @@
     "sao": "^1.6.1"
   },
   "devDependencies": {
-    "@types/node": "^10.12.21",
     "ava": "^1.2.0",
     "prettier": "^1.16.4",
     "ts-node": "^8.0.2",
