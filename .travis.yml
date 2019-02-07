@@ -12,6 +12,7 @@ deploy:
     api_key:
       secure: PKnszkaxyv5m7Dn8LVtuXYxQkLJdjbjWEENl1Yofs5ZboEqq7GMQOu/xzB2gAIwQ+5jZOIB/GYNO2Xj2Iy92C+d2xc4QBbt8aFyhqF46ltWHiVU/98MCmks3JwEl5++69Q6/u2MpJz2ZK2GUW7katHiBo4oNVDpuJzuOWa/BLN9mTHwnRYtz4T1UJHxG7CW09vgdzI70w+J4+bHG958h3NUr/2JI8T1Rb6I9ZHVBt35QTr9FXBzst7F0G1dmJ0faT2zzT/DylNqStjZ4MsFC5gTmD6+l4w6TEJsldsSDJGp7OMUdusaRvs7ycGWeew4GHmTkMw7u4aRWB6UnfT1gWgzGwVWuDLgsxYSAH3n1wf+KOz3TSICMFScvRbYBd/udR7HSaIVrhd2nzthLHf1+O1YlqbJwLmBFepxvlQ4F51VpaEvAdFf1vizlq0R6U2EwCnb+/MINPx4NwGZOWZKtG2L4CnNr6Z5UgNzt6VrztvETrIqP0ai6JHHcZF7gYFXMOT0nUGc3YBormyWPZvgA8p1zVslCPwMezKRFAXm9OrQh/3cCZdZPoMb6l+OReVuHEkECEkILGqty7TAIQGC5D+fYJNLsVmkfToFEEo4+qwiSCMOBarz9OK61h1z5BIZwBK46AN1KvJjmhv5Uwimtq+0glDAik9r+1Q1Ai94QWDE=
     on:
+      tags: true
       repo: ressedpanda/create-nuxt--kyg
   - deploy:
     provider: npm
