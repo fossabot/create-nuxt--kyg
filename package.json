@@ -1,6 +1,6 @@
 {
   "name": "create-nuxt--kyg",
-  "version": "2.0.0-build.4",
+  "version": "2.0.0-build.5",
   "description": "Nuxt.js Scaffolding Tools",
   "main": "bin/cli.js",
   "bin": {
