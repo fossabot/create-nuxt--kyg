@@ -74,7 +74,7 @@ module.exports = {
         choices: [
           {
             name: 'None',
-            value: 'none'
+            value: ''
           },
           {
             name: 'MIT License',
