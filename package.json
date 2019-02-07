@@ -10,7 +10,7 @@
     "bin/config.js",
     "bin/cli.js",
     "generator/template",
-    "generator/saofile.ts"
+    "generator/saofile.js"
   ],
   "repository": {
     "type": "git",
