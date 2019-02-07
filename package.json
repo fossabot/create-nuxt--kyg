@@ -7,8 +7,10 @@
     "create-nuxt--kyg": "bin/cli.js"
   },
   "files": [
-    "bin",
-    "generator"
+    "bin/config.js",
+    "bin/cli.js",
+    "generator/template",
+    "generator/saofile.ts"
   ],
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/ressedpanda/create-nuxt--kyg#readme",
   "scripts": {
+    "prepublish": "tsc",
     "test": "ava"
   },
   "keywords": [
@@ -34,12 +37,20 @@
   "devDependencies": {
     "@types/node": "^10.12.21",
     "ava": "^1.2.0",
-    "eslint": "^5.13.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.3.1"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

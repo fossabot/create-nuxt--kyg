@@ -1,8 +1,8 @@
 'use strict'
 
-const test = require('ava')
-const sao = require('sao')
-const { opts, answers } = require('./_variables')
+import test from 'ava'
+import sao from 'sao'
+import { answers, opts } from '../bin/config'
 
 test('1. Project Information', async t => {
   const stream = await sao.mock(opts, answers)

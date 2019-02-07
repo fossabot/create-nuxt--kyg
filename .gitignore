@@ -6,3 +6,7 @@
 
 # NodeJS
 node_modules/
+
+# Typescript
+bin/*.js
+generator/saofile.js

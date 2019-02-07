@@ -1,15 +1,17 @@
+/* tslint:disable:object-literal-sort-keys */
 'use strict'
 
-const depVersion = {
-  nuxt: '^2.4.0',
-  typescript: '^3.3.1',
+const nuxtVersion = '^2.4.0'
+
+const dependencies = {
   js: {
+    nuxt: nuxtVersion,
     dev: {
+      eslint: '^5.12.1',
       '@babel/core': '^7.2.2',
       '@nuxt/babel-preset-app': '^2.3.4',
       '@nuxtjs/eslint-config': '^0.0.1',
       'babel-eslint': '^10.0.1',
-      'eslint': '^5.12.1',
       'eslint-config-prettier': '^3.6.0',
       'eslint-config-prettier-standard': '^2.0.0',
       'eslint-config-standard': '^12.0.0',
@@ -23,19 +25,21 @@ const depVersion = {
     }
   },
   ts: {
+    'nuxt-ts': nuxtVersion,
     dev: {
-      'tslint': '^5.12.1',
+      tslint: '^5.12.1',
       'tslint-config-prettier': '^1.18.0',
       'tslint-config-standard': '^8.0.1'
     }
   }
 }
 
+// noinspection JSUnusedGlobalSymbols
 module.exports = {
   templateData () {
     return {
-      year: new Date().getFullYear(),
-      username: this.gitUser.name
+      username: this.gitUser.name,
+      year: new Date().getFullYear()
     }
   },
   prompts () {
@@ -118,17 +122,14 @@ module.exports = {
   },
   actions () {
     const { license, language, srcDir } = this.answers
-
     return [
-      /* == Project Information == */
-
-      /* 공통 파일 추가 */
+      /* Project Information */
       {
+        /* common file */
         type: 'add',
         templateDir: 'template/common',
         files: '**'
       },
-      /* 라이선스 파일 추가 */
       {
         type: 'add',
         templateDir: 'template/license',
@@ -140,11 +141,47 @@ module.exports = {
           'LICENSE-*': 'LICENSE'
         }
       },
-      /* == Nuxt.JS == */
+      /* package.json */
+      {
+        type: 'modify',
+        files: 'package.json',
+        handler (pkg) {
+          for (const [depName, depVersion] of Object.entries(dependencies[language])) {
+            if (depName === 'dev') {
+              for (const [devName, devVersion] of Object.entries(dependencies[language].dev)) {
+                pkg.devDependencies[devName] = devVersion
+              }
+            } else {
+              pkg.dependencies[depName] = depVersion
+            }
+          }
+
+          return pkg
+        }
+      },
+      /* Nuxt.js */
       {
         type: 'add',
         templateDir: 'template/nuxt/src',
         files: '**'
+      },
+      {
+        type: 'modify',
+        files: 'nuxt.config',
+        handler(conf) {
+          let prefix = 'module.exports = '
+          if (language === 'ts') {
+            prefix = "export default "
+          }
+
+          return prefix + conf
+        }
+      },
+      {
+        type: 'move',
+        patterns: {
+          'nuxt.config': `nuxt.config.${language}`
+        }
       },
       (srcDir !== '.') && {
         type: 'move',
@@ -156,69 +193,10 @@ module.exports = {
           'pages': `${srcDir}/pages`
         }
       },
-      /* package dependency */
-      {
-        type: 'modify',
-        files: 'package.json',
-        handler (pkg) {
-          let pkgName = 'nuxt'
-          const dependencies = {}
-          const devDependencies = {}
-
-          /* Nuxt.js package */
-          if (language === 'ts') {
-            pkgName += '-ts'
-            dependencies.typescript = depVersion.typescript
-          }
-
-          /* Add Dev Dependency */
-          for (let dep in depVersion[language].dev) {
-            devDependencies[dep] = depVersion[language].dev[dep]
-          }
-
-          /* Add Test Script */
-          pkg.scripts.build = `npx ${pkgName} build`
-          pkg.scripts.start = `npx ${pkgName} start`
-          pkg.scripts.dev = `npx ${pkgName}`
-
-          dependencies[pkgName] = depVersion.nuxt
-          pkg.dependencies = Object.assign({}, pkg.dependencies, dependencies)
-          pkg.devDependencies = Object.assign({}, pkg.devDependencies, devDependencies)
-
-          return pkg
-        }
-      },
       {
         type: 'add',
         templateDir: `template/nuxt/${language}`,
         files: '**'
-      },
-      /* nuxt.js config */
-      {
-        type: 'add',
-        templateDir: 'template/nuxt',
-        files: 'nuxt.config.json'
-      },
-      {
-        type: 'move',
-        patterns: {
-          'nuxt.config.json': `nuxt.config.${language}`
-        }
-      },
-      {
-        type: 'modify',
-        files: `nuxt.config.${language}`,
-        handler (conf) {
-          let returnConf = "'use strict'\n\n"
-
-          if (language === 'ts') {
-            returnConf += `export default ${conf}`
-          } else {
-            returnConf += `module.exports = ${conf}`
-          }
-
-          return returnConf
-        }
       },
       /* 이름 변경 */
       {
@@ -234,7 +212,7 @@ module.exports = {
       }
     ]
   },
-  async completed () {
+  async completed() {
     this.gitInit()
     this.showProjectTips()
   }
