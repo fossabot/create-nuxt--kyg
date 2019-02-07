@@ -13,10 +13,10 @@ deploy:
     file: ''
     on:
       repo: ressedpanda/create-nuxt--kyg
-    - provider: npm
-      email: mail@kyg.kr
-      api_key:
-        secure: kuXy9kTLa0M9kpRtS0sbyNeLTBiqmPc+WjWp0AGxsv+dwEUt7BvjvurywZm4wjsJ95zwOv5NJ5VbPKxV5xJREwdcSjhEQkL7wHdedKSrPpiRGswhWX5J2d0YPkoleUuBkT1vfOcXOlqTkOS4++j/X4wqGViYNN+t1qPu+t9eREgSmbu4EOPyMvhK6YgNrSTsbEPW45YenJbs2mQ4rvojP4SLGKyLSWbXCxSESf5a2hIrbiT1A1MQcrrXcC4vrqLW+SuWIr4pPcJFkhEQMnVcqMQH3Gc0qBxh7w6tavDwz5kppIYXn957D5T1SPZRrCAsg0XL+is63A2zHzzvBSb+44tpJ0eWgnaGI9HSqOmiyU7/d2Jv97wPPxb6LEHGtMsER1qAG6WvmDwfLun4vYBZnsK8rh8vGW6GsM0F3xND14WPbTlqia+u41q5MJENTCijQsqOYhOt0XrVS4Mfsf7/B1eTxcjG+ScXcccNU2bqSslf0eA6AMVMQ8Jr58eK0vi5tVzj2EmYxcMkwgR8neCE/lgS52Nwg/pthGb5oJqaQnQdfuglFyt+09JnAkgyfDB9BAGw0rduTBolNrujdzofbCDno6zrtR7efoHixAqMRWetGrQ8PpsA2oNawxVyPc2+w33+QWpWJDfrjnL/DTsUdX85vQXAMduMj5NbuysrtiY=
-      on:
-        tags: true
-        repo: ressedpanda/create-nuxt--kyg
+  - provider: npm
+    email: mail@kyg.kr
+    api_key:
+      secure: kuXy9kTLa0M9kpRtS0sbyNeLTBiqmPc+WjWp0AGxsv+dwEUt7BvjvurywZm4wjsJ95zwOv5NJ5VbPKxV5xJREwdcSjhEQkL7wHdedKSrPpiRGswhWX5J2d0YPkoleUuBkT1vfOcXOlqTkOS4++j/X4wqGViYNN+t1qPu+t9eREgSmbu4EOPyMvhK6YgNrSTsbEPW45YenJbs2mQ4rvojP4SLGKyLSWbXCxSESf5a2hIrbiT1A1MQcrrXcC4vrqLW+SuWIr4pPcJFkhEQMnVcqMQH3Gc0qBxh7w6tavDwz5kppIYXn957D5T1SPZRrCAsg0XL+is63A2zHzzvBSb+44tpJ0eWgnaGI9HSqOmiyU7/d2Jv97wPPxb6LEHGtMsER1qAG6WvmDwfLun4vYBZnsK8rh8vGW6GsM0F3xND14WPbTlqia+u41q5MJENTCijQsqOYhOt0XrVS4Mfsf7/B1eTxcjG+ScXcccNU2bqSslf0eA6AMVMQ8Jr58eK0vi5tVzj2EmYxcMkwgR8neCE/lgS52Nwg/pthGb5oJqaQnQdfuglFyt+09JnAkgyfDB9BAGw0rduTBolNrujdzofbCDno6zrtR7efoHixAqMRWetGrQ8PpsA2oNawxVyPc2+w33+QWpWJDfrjnL/DTsUdX85vQXAMduMj5NbuysrtiY=
+    on:
+      tags: true
+      repo: ressedpanda/create-nuxt--kyg
