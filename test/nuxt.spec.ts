@@ -4,7 +4,7 @@ import test from 'ava'
 import sao from 'sao'
 import { answers, opts } from '../bin/config'
 
-test('2-1. Nuxt.JS', async t => {
+test('1. Nuxt.JS', async t => {
   const answer = Object.assign({}, answers, { language: 'js' })
   const stream = await sao.mock(opts, answer)
 
@@ -19,7 +19,7 @@ test('2-1. Nuxt.JS', async t => {
   })
 })
 
-test('2-2. Nuxt.JS for Typescript', async t => {
+test('2. Nuxt.JS for Typescript', async t => {
   const answer = Object.assign({}, answers, { language: 'ts' })
   const stream = await sao.mock(opts, answer)
 

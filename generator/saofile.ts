@@ -34,6 +34,10 @@ const dependencies = {
   }
 }
 
+const modules = {
+  'nuxt-i18n': '^5.3.0'
+}
+
 // noinspection JSUnusedGlobalSymbols
 module.exports = {
   templateData () {
@@ -117,11 +121,23 @@ module.exports = {
             value: 'spa'
           }
         ]
+      },
+      {
+        name: 'nuxtModules',
+        message: 'Nuxt.js Modules',
+        type: 'checkbox',
+        choices: [
+          {
+            name: 'Localization (nuxt-i18n)',
+            value: 'nuxt-i18n'
+          }
+        ]
       }
     ]
   },
   actions () {
-    const { license, language, srcDir } = this.answers
+    const { license, language, srcDir, nuxtModules = [] } = this.answers
+
     return [
       /* Project Information */
       {
@@ -146,6 +162,7 @@ module.exports = {
         type: 'modify',
         files: 'package.json',
         handler (pkg) {
+          /* add dependency */
           for (const [depName, depVersion] of Object.entries(dependencies[language])) {
             if (depName === 'dev') {
               for (const [devName, devVersion] of Object.entries(dependencies[language].dev)) {
@@ -154,6 +171,11 @@ module.exports = {
             } else {
               pkg.dependencies[depName] = depVersion
             }
+          }
+
+          /* add module dependency */
+          for (const module of nuxtModules) {
+            pkg.dependencies[module] = modules[module]
           }
 
           return pkg
@@ -183,14 +205,22 @@ module.exports = {
           'nuxt.config': `nuxt.config.${language}`
         }
       },
-      (srcDir !== '.') && {
+      nuxtModules.includes('nuxt-i18n') && {
+        type: 'add',
+        templateDir: 'template/nuxt/modules/i18n',
+        files: '**'
+      },
+      {
         type: 'move',
         patterns: {
+          /* assets */
+          'assets': `${srcDir}/assets`,
+
           /* layout */
           'layouts': `${srcDir}/layouts`,
 
           /* page */
-          'pages': `${srcDir}/pages`
+          'pages': `${srcDir}/pages`,
         }
       },
       {

@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/ressedpanda/create-nuxt--kyg#readme",
   "scripts": {
-    "prepublish": "tsc",
-    "test": "ava"
+    "prepublish": "npx tsc",
+    "test": "npx tsc && npx ava"
   },
   "keywords": [
     "sao",

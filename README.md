@@ -29,6 +29,8 @@ $ yarn create nuxt--kyg <project-name>
     - Javascript (default)
     - Typescript
 6. Nuxt.js Source Folder (default: src)
-6. Nuxt.js Rendering Mode
+7. Nuxt.js Rendering Mode
     - Universal Application (default)
     - Single Page Application
+8. Nuxt.js Module
+    - Localization (nuxt-i18n)

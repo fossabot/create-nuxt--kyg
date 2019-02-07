@@ -1,6 +1,6 @@
 <template>
     <div id="index">
-        <h1>Hello Vue!</h1>
+        <h1><% if((typeof nuxtModules) !== 'undefined' && nuxtModules.includes('nuxt-i18n')) { %>{{ $t('title') }}<% } else { %>Hello Vue!<% } %></h1>
     </div>
 </template>
 

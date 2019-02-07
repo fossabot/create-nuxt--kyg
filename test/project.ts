@@ -4,7 +4,7 @@ import test from 'ava'
 import sao from 'sao'
 import { answers, opts } from '../bin/config'
 
-test('1. Project Information', async t => {
+test('Project Information', async t => {
   const stream = await sao.mock(opts, answers)
   const fileList = stream.fileList
 
