@@ -25,6 +25,7 @@ test('Project Information', async t => {
   t.true(fileList.includes('package.json'))
   await stream.readFile('package.json').then((pkg) => {
     const p = JSON.parse(pkg)
+
     t.is(p.version, '0.1.0')
   })
 })

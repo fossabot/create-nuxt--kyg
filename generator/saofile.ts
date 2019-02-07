@@ -41,9 +41,11 @@ const modules = {
 // noinspection JSUnusedGlobalSymbols
 module.exports = {
   templateData () {
+    const { language } = this.answers
+
     return {
       username: this.gitUser.name,
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     }
   },
   prompts () {
@@ -137,6 +139,7 @@ module.exports = {
   },
   actions () {
     const { license, language, srcDir, nuxtModules = [] } = this.answers
+    const pkgName = (language === 'ts') ? 'nuxt-ts' : 'nuxt'
 
     return [
       /* Project Information */
@@ -162,6 +165,13 @@ module.exports = {
         type: 'modify',
         files: 'package.json',
         handler (pkg) {
+          /* add script */
+          pkg.scripts = {
+            build: `npx ${pkgName} build`,
+            start: `npx ${pkgName} start`,
+            dev: `npx ${pkgName}`
+          }
+
           /* add dependency */
           for (const [depName, depVersion] of Object.entries(dependencies[language])) {
             if (depName === 'dev') {
@@ -209,6 +219,13 @@ module.exports = {
         type: 'add',
         templateDir: 'template/nuxt/modules/i18n',
         files: '**'
+      },
+      nuxtModules.includes('nuxt-i18n') &&
+      language === 'ts' && {
+        type: 'move',
+        patterns: {
+          'en-US.js': 'en-US.ts'
+        }
       },
       {
         type: 'move',

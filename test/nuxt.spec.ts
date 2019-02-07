@@ -1,3 +1,4 @@
+/* tslint:disable:object-literal-sort-keys */
 'use strict'
 
 import test from 'ava'
@@ -12,6 +13,11 @@ test('1. Nuxt.JS', async t => {
     const js = JSON.parse(pkg)
     t.true((typeof js.dependencies.nuxt) !== 'undefined')
     t.true((typeof js.devDependencies.eslint) !== 'undefined')
+    t.deepEqual(js.scripts, {
+      build: 'npx nuxt build',
+      start: 'npx nuxt start',
+      dev: 'npx nuxt',
+    })
   })
 
   await stream.readFile('nuxt.config.js').then((conf) => {
@@ -27,6 +33,11 @@ test('2. Nuxt.JS for Typescript', async t => {
     const ts = JSON.parse(pkg)
     t.true((typeof ts.dependencies['nuxt-ts']) !== 'undefined')
     t.true((typeof ts.devDependencies.tslint) !== 'undefined')
+    t.deepEqual(ts.scripts, {
+      build: 'npx nuxt-ts build',
+      start: 'npx nuxt-ts start',
+      dev: 'npx nuxt-ts',
+    })
   })
 
   await stream.readFile('nuxt.config.ts').then((conf) => {
