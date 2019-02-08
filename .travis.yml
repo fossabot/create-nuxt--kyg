@@ -14,12 +14,3 @@ deploy:
     on:
       tags: true
       repo: ressedpanda/create-nuxt--kyg
-  - deploy:
-    provider: npm
-    email: mail@kyg.kr
-    skip_cleanup: true
-    api_key:
-      secure: NMY909Yoj/K4YDYI6ScH5LnEEOdOLtb3FNJkOaq+if0Xw1KLrJilMubNPuhvSp2JaD5T347KG/DJ8DDHbDLuX5nec2D43sXMlygVhkQSXc5qjr+TzLTYQSdRIwQCCe3Q9r8CPDvwcsGlt4HRpBRDUJ/wJxjw7l7vuk4vyH2qNkpL7kAYSguayPE80eQNUL7c2OPcoZGWis5bCpVK0fptp2P14RYs+aovKSxPwPRJPNgswkjcoL/Raqp7hI1bYh8nflMNT57wPAiaU+xssZSkGiQVHR75cBVy1KTt7hgdN54Jn8RsruXiLbtaIFM8YdM5WY5cf7hCzkvsgraCSwdLRc4s09M700x8rcGNOSOIh0Yo6dr75Ls4cqHiqudiJKP0/rFJZbd2w1QjBaEs/7Nz5qCXmMVeb5a6WXq/lEv45mDgn/Dc9zXV0T3UAJrDvxxOj5uNqG3cCbpFoROB5vKokpPMWvSdno6Jz1pfMK5IWyPRWcylYzkBp2nFnTqMtVOVwGV/DWqY59636jkdn36A882LOLdJ2KXOlk4cLgLzEoRp9PztErk6Sr0DspPfpjisEeRVB5o1WFyV1TQup/jjbMMZTd2HSpEx9gTE9SzRxe5WmgEY9eVX3RQW6MxfJ5JDDTHbIk4CL3cfq9cwEhIhi5zAzCWXLxTQ5uACyh+cGq4=
-    on:
-      tags: true
-      repo: ressedpanda/create-nuxt--kyg
