@@ -1,9 +1,8 @@
 # Create Nuxt for KYG
-![#](https://img.shields.io/travis/com/ressedpanda/create-nuxt--kyg.svg?style=flat-square)
-![#](https://img.shields.io/travis/com/ressedpanda/create-nuxt--kyg/develop.svg?label=build%20%28develop%29&style=flat-square)
-![#](https://img.shields.io/npm/v/create-nuxt--kyg.svg?style=flat-square)
+[![#](https://img.shields.io/travis/com/ressedpanda/create-nuxt--kyg.svg?style=flat-square)](https://travis-ci.com/ressedpanda/create-nuxt--kyg)
+[![#](https://img.shields.io/npm/v/create-nuxt--kyg.svg?style=flat-square)](https://www.npmjs.com/package/create-nuxt--kyg)
 ![#](https://img.shields.io/npm/dt/create-nuxt--kyg.svg?style=flat-square)
-![#](https://img.shields.io/snyk/vulnerabilities/github/ressedpanda/create-nuxt--kyg.svg?style=flat-square)
+[![#](https://img.shields.io/snyk/vulnerabilities/github/ressedpanda/create-nuxt--kyg.svg?style=flat-square)](https://snyk.io/test/github/ressedpanda/create-nuxt--kyg?targetFile=package.json)
 > Nuxt.js Scaffolding Tools 
 
 ## Usage
