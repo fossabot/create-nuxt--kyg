@@ -38,3 +38,12 @@ $ yarn create nuxt--kyg <project-name>
     - Single Page Application
 8. Nuxt.js Module
     - Localization (nuxt-i18n)
+    
+## TO-DO Feature
+### Nuxt.js
+8. Nuxt.js Module
+    - HTTP Client (@nuxtjs/axios)
+9. StyleSheet
+    - CSS (default)
+    - SASS / SCSS
+    - LESS
