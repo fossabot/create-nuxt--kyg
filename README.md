@@ -3,6 +3,7 @@
 [![#](https://img.shields.io/npm/v/create-nuxt--kyg.svg?style=flat-square)](https://www.npmjs.com/package/create-nuxt--kyg)
 ![#](https://img.shields.io/npm/dt/create-nuxt--kyg.svg?style=flat-square)
 [![#](https://img.shields.io/snyk/vulnerabilities/github/ressedpanda/create-nuxt--kyg.svg?style=flat-square)](https://snyk.io/test/github/ressedpanda/create-nuxt--kyg?targetFile=package.json)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg?ref=badge_shield)
 > Nuxt.js Scaffolding Tools 
 
 ## Usage
@@ -28,6 +29,9 @@ $ yarn create nuxt--kyg <project-name>
     - MIT License
     - The Unlicense
     
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg?ref=badge_large)
+
 ### Nuxt.js
 5. Nuxt.js Development Language
     - Javascript (default)
