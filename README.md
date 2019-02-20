@@ -28,9 +28,6 @@ $ yarn create nuxt--kyg <project-name>
     - None (or custom)
     - MIT License
     - The Unlicense
-    
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fressedpanda%2Fcreate-nuxt--kyg?ref=badge_large)
 
 ### Nuxt.js
 5. Nuxt.js Development Language
